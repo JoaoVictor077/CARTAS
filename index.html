@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <title>UNO! — Você contra o computador</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <header class="header">
+    <div><div class="eyebrow">JOGO DE CARTAS</div><h1>UNO<span>!</span></h1></div>
+    <button id="newGame" class="new-game">↻ Novo jogo</button>
+  </header>
+
+  <section class="board">
+    <div class="opponent">
+      <div class="avatar">🤖</div>
+      <div><b>Computador</b><small id="computerCount">7 cartas</small></div>
+      <div class="backs" id="computerBacks"></div>
+    </div>
+
+    <div class="play-zone">
+      <div class="pile">
+        <small>MONTE DE COMPRA</small>
+        <button id="drawButton" class="card back-card" aria-label="Comprar carta"><span>UNO</span></button>
+        <small id="deckCount">— cartas</small>
+      </div>
+      <div class="discard">
+        <small>CARTA DA VEZ</small>
+        <div id="topCard" class="card"></div>
+        <div id="currentColor" class="color-label">Cor: —</div>
+      </div>
+    </div>
+
+    <div class="status" id="message" aria-live="polite">Preparando partida...</div>
+    <div class="player-area">
+      <div class="player-title"><div class="avatar you">🙂</div><div><b>Suas cartas</b><small>Selecione uma carta válida para jogar</small></div></div>
+      <div id="hand" class="hand"></div>
+    </div>
+  </section>
+
+  <section class="actions">
+    <button id="passButton" class="pass-button" hidden>Passar a vez</button>
+    <button id="unoButton" class="uno-button" hidden>UNO!</button>
+    <div class="color-picker" id="colorPicker" hidden>
+      <span>Escolha a cor do coringa:</span>
+      <button data-color="vermelho" class="dot red" aria-label="Vermelho"></button>
+      <button data-color="azul" class="dot blue" aria-label="Azul"></button>
+      <button data-color="verde" class="dot green" aria-label="Verde"></button>
+      <button data-color="amarelo" class="dot yellow" aria-label="Amarelo"></button>
+    </div>
+  </section>
+  <footer>UNO para navegador • Você contra o computador • HTML, CSS e JavaScript</footer>
+</main>
+<script src="game.js"></script>
+</body>
+</html>
